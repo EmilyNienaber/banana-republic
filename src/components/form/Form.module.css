@@ -1,9 +1,12 @@
 .main {
+  position: relative;
   flex: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  background: red;
+  height: 100%;
 }
 
 .form {
@@ -16,7 +19,21 @@
 .formElement {
   /* background: red; */
   display: flex;
-  gap: 1em;
+  gap: 2em;
   width: 100%;
   justify-content: space-between;
+}
+
+.formElement> :first-child {
+  flex: 1;
+}
+
+.formElement> :last-child {
+  flex: 2;
+}
+
+.choices {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }

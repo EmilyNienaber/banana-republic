@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styles from './Form.module.css'
+import ExtraContent from '../extraContent/ExtraContent';
 
-const Form = () => {
+const Form = ({ extraContentOpen }) => {
   const [formData, setFormData] = useState({
     name: '',
     gender: 'male',
@@ -37,6 +38,7 @@ const Form = () => {
 
   return (
     <div className={styles.main}>
+      <ExtraContent open={extraContentOpen} />
       <form className={styles.form}>
         <div className={styles.formElement}>
           <label>Name:</label>
@@ -49,26 +51,28 @@ const Form = () => {
         </div>
         <div className={styles.formElement}>
           <label>Gender:</label>
-          <label>
-            <input
-              type="radio"
-              name="gender"
-              value="male"
-              checked={formData.gender === 'male'}
-              onChange={handleChange}
-            />
-            Male
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="gender"
-              value="female"
-              checked={formData.gender === 'female'}
-              onChange={handleChange}
-            />
-            Female
-          </label>
+          <div className={styles.choices}>
+            <label>
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                checked={formData.gender === 'male'}
+                onChange={handleChange}
+              />
+              Male
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                checked={formData.gender === 'female'}
+                onChange={handleChange}
+              />
+              Female
+            </label>
+          </div>
         </div>
         <div className={styles.formElement}>
           <label>Date of Birth:</label>
@@ -99,36 +103,38 @@ const Form = () => {
         </div>
         <div className={styles.formElement}>
           <label>Membership:</label>
-          <label>
-            <input
-              type="radio"
-              name="membership"
-              value="Classic"
-              checked={formData.membership === 'Classic'}
-              onChange={handleChange}
-            />
-            Classic
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="membership"
-              value="Silver"
-              checked={formData.membership === 'Silver'}
-              onChange={handleChange}
-            />
-            Silver
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="membership"
-              value="Gold"
-              checked={formData.membership === 'Gold'}
-              onChange={handleChange}
-            />
-            Gold
-          </label>
+          <div className={styles.choices}>
+            <label>
+              <input
+                type="radio"
+                name="membership"
+                value="Classic"
+                checked={formData.membership === 'Classic'}
+                onChange={handleChange}
+              />
+              Classic
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="membership"
+                value="Silver"
+                checked={formData.membership === 'Silver'}
+                onChange={handleChange}
+              />
+              Silver
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="membership"
+                value="Gold"
+                checked={formData.membership === 'Gold'}
+                onChange={handleChange}
+              />
+              Gold
+            </label>
+          </div>
         </div>
         <div>
           <button type="button" onClick={handleCancel}>

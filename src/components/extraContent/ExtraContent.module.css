@@ -1,0 +1,15 @@
+.main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 100%;
+  transition: right 0.3s ease-in;
+  background: #ff9200;
+  z-index: 99;
+}
+
+.open {
+  composes: main;
+  right: 0;
+}
