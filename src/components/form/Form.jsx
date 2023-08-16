@@ -10,6 +10,7 @@ const Form = ({ extraContentOpen }) => {
     name: '',
     gender: 'male',
     dob: '',
+    email: '',
     mobile: '',
     customerId: '',
     membership: 'Classic',
@@ -28,6 +29,7 @@ const Form = ({ extraContentOpen }) => {
       name: '',
       gender: 'male',
       dob: '',
+      email: '',
       mobile: '',
       customerId: '',
       membership: 'Classic',
@@ -88,6 +90,20 @@ const Form = ({ extraContentOpen }) => {
             onChange={handleChange}
             placeholder="1983-01-02"
           />
+        </div>
+        <div className={styles.errorElement}>
+          <label>Email</label>
+          <div className={styles.inputContainer}>
+            <input
+              type="text"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="kendall@email.com"
+            />
+            {/* Error display is visual only */}
+            <p className={styles.errorText}>Invalid email address</p>
+          </div>
         </div>
         <div className={styles.formElement}>
           <label>Mobile:</label>

@@ -76,6 +76,39 @@
   color: #cad7dd;
 }
 
+.errorElement {
+  composes: formElement;
+  color: #ff9200;
+  overflow: visible;
+}
+
+.errorElement::before {
+  content: '*';
+  position: absolute;
+  transform: translateX(-15px);
+}
+
+.errorElement input,
+.errorElement input:focus {
+  border: 1px solid #ff9200;
+  color: #ff9200;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContainer input {
+  height: 50px;
+}
+
+.errorText {
+  font-size: 12px;
+  text-align: right;
+  margin: 0;
+}
+
 .customIcon {
   background: #f5f8f9;
   padding: 7px;
