@@ -6,13 +6,15 @@
   justify-content: center;
   padding: 2rem;
   height: 100%;
+  /* background: lightcoral; */
 }
 
 .form {
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 1em;
+  font-size: larger;
 }
 
 .formElement {
@@ -21,18 +23,106 @@
   gap: 2em;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .formElement> :first-child {
   flex: 1;
 }
 
-.formElement> :last-child {
+.formElement>:last-child {
   flex: 2;
+  height: 50px;
 }
 
 .choices {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  color: #cad7dd;
+  font-size: medium;
+
+}
+
+.choices>* {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  position: relative;
+}
+
+.choices>* input[type="radio"] {
+  display: none;
+  height: 30px;
+  width: 30px;
+}
+
+.formElement input {
+  font-size: large;
+  border: unset;
+  background: #f5f8f9;
+  border-radius: 7px;
+  color: #373d40;
+  padding-inline: 0.75em;
+}
+
+.formElement input:focus {
+  border: 1px solid #cad7dd;
+  background: transparent;
+}
+
+.formElement input::placeholder {
+  color: #cad7dd;
+}
+
+.customIcon {
+  background: #f5f8f9;
+  padding: 7px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  color: #cad7dd;
+
+}
+
+.customIconChecked {
+  composes: customIcon;
+  background: #cad7dd;
+  color: white;
+}
+
+.membership {
+  composes: formElement;
+  margin: 2em 0;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.button {
+  font-size: 30px;
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 150px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.cancelButton {
+  composes: button;
+  background: #cad7dd;
+  color: #373d40;
+}
+
+.saveButton {
+  composes: button;
+  background: #49c8a8;
+  color: white;
 }

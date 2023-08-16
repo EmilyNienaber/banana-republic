@@ -1,4 +1,6 @@
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -8,4 +10,13 @@
   position: relative;
   display: flex;
   align-items: stretch;
+  font-size: 20px;
+  color: #373d40;
+}
+
+input,
+input:focus {
+  border: unset;
+  border-color: unset;
+  outline: unset;
 }

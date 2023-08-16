@@ -4,7 +4,7 @@ import Form from "../../components/form/Form";
 import SidePanel from "../../components/sidePanel/SidePanel";
 
 const Home = () => {
-  const [extraContentOpen, setExtraContentOpen] = useState(true)
+  const [extraContentOpen, setExtraContentOpen] = useState(false)
 
   return (
     <div className={styles.main}>

@@ -9,12 +9,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   z-index: 100;
+}
 
+.main p {
+  margin: 0;
+  max-width: 55%;
+  font-size: 20px;
 }
 
 .image {
-  height: 33%;
+  width: 40%;
   margin-block: 10%;
 }
 
@@ -35,6 +41,7 @@
   background: #373d40;
   cursor: pointer;
   transition: 0.3s ease;
+  margin-top: 3em;
 }
 
 .arrowButtonOpen {
