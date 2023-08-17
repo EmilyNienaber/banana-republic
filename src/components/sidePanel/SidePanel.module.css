@@ -48,3 +48,19 @@
   composes: arrowButton;
   transform: rotate(-180deg);
 }
+
+@media screen and (max-width: 650px) {
+  .main {
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+
+  .arrowButton {
+    transform: rotate(90deg);
+  }
+
+  .arrowButtonOpen {
+    transform: rotate(-90deg);
+  }
+}

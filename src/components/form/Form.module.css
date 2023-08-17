@@ -6,11 +6,11 @@
   justify-content: center;
   padding: 2rem;
   height: 100%;
-  /* background: lightcoral; */
 }
 
 .form {
-  width: 50%;
+  width: 100%;
+  padding-inline: 10vw;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -18,7 +18,6 @@
 }
 
 .formElement {
-  /* background: red; */
   display: flex;
   gap: 2em;
   width: 100%;
@@ -158,4 +157,11 @@
   composes: button;
   background: #49c8a8;
   color: white;
+}
+
+@media screen and (max-width: 650px) {
+  .form {
+    width: 100%;
+    padding-inline: 5%;
+  }
 }
