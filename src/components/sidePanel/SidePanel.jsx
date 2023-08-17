@@ -18,8 +18,6 @@ const SidePanel = ({ slidePanelOpen, setSlidePanelOpen }) => {
       >
         <Arrow className={styles.arrow} />
       </button>
-
-      {/* <img src={face.src} alt="face image" /> */}
     </div>
   )
 }
